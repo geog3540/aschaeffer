@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Alyssa's GeoVis Portfolio</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Alyssa Schaeffer's Geovisualization Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shortbio.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="files/Spring 2023 Resume.pdf">Resume</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mailto:alyssa-schaeffer@uiowa.edu">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Page Heading -->
+      <h1 class="my-4"> Flow Mapping
+        <small>Migration in Mexico</small>
+      </h1>
+
+      <div class="row">
+		<img class="card-img-top" src="images/flow.jpg" alt="">
+		</div>
+		<div>
+		<p> <a href="files/flowmapping.json"> Project File </a> </p>
+		</div>
+		<div>
+		<p> <a href="https://hub.worldpop.org/geodata/summary?id=1283"> Data Source </a> </p>
+		</div>
+		<p class="card-text"> Flow Map Design: 
+		Koylu’s paper on FlowMapper mentioned that Albers Equal Area or Web Mercator are best for regional maps. I chose 
+		Web Mercator since Mexico didn’t fit neatly into the U.S. or South American Albers Equal Area projections. The Light 
+		Gray basemap was used because it provides a good outline of the different regions in Mexico without being cluttered 
+		by specific city names. It also provides a good contract for the arrow colors. Koylu’s paper on FlowMapper also 
+		mentioned that hiding node symbols may be useful for visualizing flows between regions to highlight the nature of the 
+		flows. For that reason, I chose to hide node symbols using zero stroke-width and full transparency for the fill color. 
+		The monotone arrowhead was selected because of the accuracy and speed with which the arrow can be interpreted. Koylu’s 
+		paper on symbology found that arrowheads are useful in direction tasks which is important for interpreting migration 
+		data. Divergent color schemes were not found to be helpful in the correctness and response time for interpreting flow 
+		maps, so a solid color arrow was used. Only the top 60 flows were mapped to limit visual clutter. From a color theory 
+		perspective, I wanted to use at least one color from the Mexican flag. The flag is green, white, and red. Green and red
+		aren't great to pair together due to the occurrence of red-green color blindness which is why I chose purple and green.
+		<div>
+		Flow Patterns:
+		Mexico has 32 states, but the majority of the flows seem to center around the state of Mexico. The largest flows either 
+		come from or go to the state of Mexico. These largest flows are exchanged with states nearby Mexico to the east and northwest. 
+		There are flows coming from and going to states further north and further southeast, but those flows are much smaller in 
+		volume. While the nodes are transparent to better show the regional flows and the state names, there seems to be an outline 
+		of the nodes for Mexico and the Federal District because of the number of flows entering and leaving those areas. 
+		</div>
+
+	</p>
+       </div>
+      <!-- /.row -->
+
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Alyssa Schaeffer 2023</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
