@@ -34,11 +34,11 @@
 
 					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
 						<ul class="dropdown-menu" role="menu">
-							<li><a href="../wichoropleth/index.html">Wisconsin Overview</a></li>
-							<li><a href="index.html">Southwest Wisconsin Counties</a></li>
-							<li class="divider"></li>
-							<li><a href="caglar-koylu@uiowa.edu">Contact</a></li>
-						</ul>
+							<li><a href="project_overview.html">Project Overview</a></li>
+							<li><a href="wi_counties.html">Wisconsin Overview</a></li>
+							<li><a href="sww_counties.html">Southwest Wisconsin Counties</a></li>
+							<li><a href="">Environmental Characteristics</a></li>
+							<li><a href="">Usability Study</a></li>
 					</li>
 				</ul>
 
@@ -89,7 +89,7 @@ var whiteblue = "http://{s}.sm.mapstack.stamen.com/(toner-lite,(watercolor,$fff%
 var mapboxTiles = L.tileLayer(whiteblue).addTo(map);
 
 // CHOROPLETH MAP SETTINGS ////////////////////////////////////////////////////////////////////////////////////
-var polygonJSONFile = "data/county_pop.json"
+var polygonJSONFile = "files/sww_counties_pop.json"
 // id or name attribute to be displayed on mouse on
 var idAttribute = "Name";
 var attributeName = "Total";
@@ -98,7 +98,7 @@ var attributeAlias = "Population";
 // enter the normalization attribute to divide the original attribute with.
 // if there is no divider, the variable divideBy shouldn't be assigned any value as below:
 // var divideBy;
-var divideBy = "";
+var divideBy;
 // If you would like to multiple the variables with a constant value enter them in multiplyBy array.
 // If there is no need for multiplication, simply enter 1 for each value in multiplyBy.
 // Multiply by 1000000 converts density per square meters to per square kms.
@@ -110,7 +110,6 @@ var formatLegend = d3.format(".0f");
 // to set the frame of the point layer.
 var polygonOpacity = 0.7;
 var colors = colorbrewer.PuBu;
-//"#f1eef6", "#bdc9e1", "#74a9cf", "#0570b0";
 var numOfClasses = 5;
 
 // if there are any attribute values to be displayed on hover over, enter them into this array
