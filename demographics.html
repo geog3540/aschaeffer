@@ -28,11 +28,21 @@
 		<div class="container container-fluid">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-				<a class="navbar-brand" href="../index.html">Alyssa Schaeffer's Geovisualization Portfolio</a>
+				<a class="navbar-brand" href="../index.html">Alyssa GeoVis Portfolio</a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="defaultNavbar1">
 				<ul class="nav navbar-nav">
+<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span></a>
+						<ul class="dropdown-menu" role="menu">
+							<li><a href="project_overview.html">Project Overview</a></li>
+							<li><a href="wi_counties.html">Wisconsin Overview</a></li>
+							<li><a href="sww_counties.html">Southwest Wisconsin Counties</a></li>
+							<li><a href="environment.html">Environmental Characteristics</a></li>
+							<li><a href="wetland_landfills.html">Wetlands & Landfills</a></li>
+							<li><a href="communities.html">Community Characteristics</a></li>
+							<li><a href="demographics.html">Community Demographics</a></li>
+							<li><a href="usability_study.html">Usability Study</a></li>
 				</ul>
 
 			</div>
@@ -46,10 +56,23 @@
 			<div class="row">
 					<h1>Community Demographics in Southwest Wisconsin</h1>
 			</div>
+			<div>
+				<p class="card-text"> This small multiples map is a useful tool to gain a snapshot of each community
+				in southwest Wisconsin. Looking at possible correlations, it appears that communities with a higher
+				percentage of college educated people tends to mean a lower percentage of households making less than 
+				$30,000. The exception to this is Platteville. Nearly 50% of people in Platteville have a college education
+				but over 35% of households are making less than $30,000. This is likely because of University of Wisconsin-Platteville.
+				The number of college students living in the community is likely bringing down the income. Income and poverty
+				are also correlated, as one might expect. Communities with higher percentages of households making less than $30,000
+				tend to have higher percentages of households below the poverty line. Percent white does not appear to be correlated
+				with any of the other variables. Communities with lower white percentages had any variety of education, income,
+				and poverty rate. 
+				</p>
+			</div>
 			<hr />
 			<div class="row">
 				<div class="col-sm-4">
-					<p>Data from <a href="https://www.nhgis.org/">nhgis.org</a>, maps by Alyssa Schaeffer</p>
+					<p>Data from <a href="https://www.nhgis.org/">nhgis.org</a>.</p>
 				</div>
 				<div class='col-sm-8 mapButtons'>
 					<span class="pull-right">
@@ -112,7 +135,7 @@
 
 	/////////////////////////////////////////////////////////////////////////////////////////////////
 	// TODO: Change the variables below to customize the small multiples interface for your data
-	var polygonJSONFile = 'files/demographics.json'
+	var polygonJSONFile = 'files/demographics5.json'
 	// change the projection if needed *d3.geoAlbers()*
 	var projection = d3.geoAlbers();
 	var widthheightRatio = 0.7;
@@ -136,8 +159,8 @@
 	// Check this link on how to specify the desired format:
 	// https://observablehq.com/@d3/d3-format
 	var att1 = 'PercWhite', att1alias = 'Percent White', att1format = '.1f',
-	att2 = 'PercCollege', att2alias =  'Percent College Educated', att2format = '.1f',
-	att3 = 'PercLess30k', att3alias = 'Percent Households Making Less Than $30k', att3format = '.1f',
+	att2 = 'PercColleg', att2alias =  'Percent College Educated', att2format = '.1f',
+	att3 = 'PercLess30', att3alias = 'Percent Households Making Less Than $30k', att3format = '.1f',
 	att4 = 'PercBelow', att4alias = 'Percent Below the Poverty Line', att4format = '.1f';
 
   	// enter below all variables that should be normalized. If you would like to multiple the variables
